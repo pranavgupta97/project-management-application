@@ -1,6 +1,8 @@
 package com.pranav.projectmanagement.controllers;
 
+import com.pranav.projectmanagement.dao.ProjectRepository;
 import com.pranav.projectmanagement.entities.Project;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/projects")
 public class ProjectController {
 
+
+
+    @Autowired
+    ProjectRepository projectRepository;
 
     @GetMapping("/new")
     public String displayProjectForm(Model model) {
