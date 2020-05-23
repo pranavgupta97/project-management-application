@@ -29,4 +29,11 @@ public class ProjectController {
 
 
 
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public String createProject(Project project, Model model) {
+        projectRepository.save(project);
+
+        return "redirect:/projects/new";
+    }
+
 }
