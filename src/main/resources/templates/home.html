@@ -27,8 +27,29 @@
 
             <tbody>
             <tr th:each="project : ${projects}">
-                <td th:text="${project.name}"/>
-                <td th:text="${project.status}"/>
+                <td th:text="${project.name}"></td>
+                <td th:text="${project.status}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h4>Current employees</h4>
+        <table>
+            <thead>
+            <tr>
+                <th>Employee First name</th>
+                <th>Employee Last name</th>
+                <th>Employee Email address</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <td th:each="employee : ${employees}">
+                <td th:text="${employee.firstName}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <td th:text="${employee.email}"/></td>
             </tr>
             </tbody>
         </table>
