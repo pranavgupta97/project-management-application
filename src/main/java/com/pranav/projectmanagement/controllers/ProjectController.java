@@ -24,7 +24,7 @@ public class ProjectController {
         Project newProject = new Project();
 
         model.addAttribute("project", newProject);
-        return "add-new-project";
+        return "projects/add-new-project";
     }
 
 
