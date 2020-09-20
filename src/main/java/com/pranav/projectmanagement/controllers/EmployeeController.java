@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/employees")
 public class EmployeeController {
 
-
     @Autowired
     EmployeeRepository employeeRepository;
 
@@ -26,13 +25,6 @@ public class EmployeeController {
         return "employees/add-employee";
     }
 
-
-
-
-
-
-
-
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String createEmployee(Employee employee, Model model) {
 
@@ -40,11 +32,4 @@ public class EmployeeController {
 
         return "redirect:/employees/new";
     }
-
-
-
-
-
-
-
 }

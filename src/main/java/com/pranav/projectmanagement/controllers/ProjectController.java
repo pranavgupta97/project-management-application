@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/projects")
 public class ProjectController {
 
-
-
     @Autowired
     ProjectRepository projectRepository;
 
@@ -27,13 +25,10 @@ public class ProjectController {
         return "projects/add-new-project";
     }
 
-
-
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String createProject(Project project, Model model) {
         projectRepository.save(project);
 
         return "redirect:/projects/new";
     }
-
 }
